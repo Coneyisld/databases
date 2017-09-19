@@ -9,7 +9,21 @@ module.exports = {
   users: {
     // Ditto as above.
     get: function () {},
-    post: function () {}
+    post: function (user) {
+      db.dbConnection(function(err) {
+        if (err) {
+          console.log(err);
+        } else {
+          var sql = 'UPDATE messages SET username = user';
+          db.dbConnection(sql, function(err, result) {
+            if (err) {
+              console.log(err);
+            }
+            console.log(result.affectedRows + " record(s) updated");
+          });
+        }
+      });
+    }
   }
-};
 
+};  //end of modEx
