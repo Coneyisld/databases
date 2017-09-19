@@ -22,9 +22,9 @@ CREATE TABLE messages (
   ID int NOT NULL AUTO_INCREMENT,
   /* Describe your table here.*/
   -- stores contents of messages
-  username Varchar(255) NOT NULL,
-  message Varchar(255) NOT NULL,
-  roomname Varchar(255) NOT NULL,
+  username Varchar(255),
+  message Varchar(255), 
+  roomname Varchar(255),
   -- roomID int NOT NULL,
   -- userID int NOT NULL,
   PRIMARY KEY (ID)

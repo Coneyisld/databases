@@ -10,11 +10,9 @@ var dbConnection = mysql.createConnection({
   database: 'chat'
 });
 dbConnection.connect((err) =>{
-  if(err) {
+  if (err) {
     throw error;
-    
   }
-
   console.log('princess');
 });
 
